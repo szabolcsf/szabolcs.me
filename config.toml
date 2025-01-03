@@ -2,7 +2,7 @@ base_url = "https://szabolcs.me"
 theme = "tabi"
 
 title = "$ cd ~/"
-description = "Jack of all trades (aka devops engineer)"
+description = "Szabolcs Fazekas is a Singapore-based Software/DevOps Engineer specializing in infrastructure, automation, and cloud technologies"
 author = "Szabolcs Fazekas"
 
 generate_feeds = true
@@ -48,6 +48,8 @@ skip_anchor_prefixes = [
 #taxonomies = [{name = "tags", feed = true}]
 
 [extra]
+seo_title = "Szabolcs Fazekas – Singapore-based Software Engineer"
+base_canonical_url = "https://szabolcs.me"
 # Enable JavaScript theme toggler to allow users to switch between dark/light mode.
 # If disabled, your site will only use the theme specified in the `default_theme` variable.
 theme_switcher = true
