@@ -1,0 +1,23 @@
+# Disallow known AI bots
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPTBot
+Disallow: /
+
+User-agent: Bard
+Disallow: /
+
+User-agent: Claude
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: BingPreview
+Disallow: /
+
+# Allow all other bots
+User-agent: *
+Allow: /
+Sitemap: {{ get_url(path="sitemap.xml") }}
