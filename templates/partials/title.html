@@ -1,5 +1,5 @@
 {#- Setup -#}
-{%- set prefix = config.extra.seo_title | safe -%}
+{%- set prefix = "" -%}
 {%- set custom_separator = config.extra.separator | default(value="•") -%}
 {%- set separator = " " ~ custom_separator ~ " " -%}
 
@@ -11,6 +11,7 @@
 {%- endif %}
 
 {%- if current_path and current_path == base_path -%}
+    {%- set prefix = config.extra.seo_title | safe -%}
     {%- set suffix = "" -%}
     {%- set separator = "" -%}
 {% elif title %}
