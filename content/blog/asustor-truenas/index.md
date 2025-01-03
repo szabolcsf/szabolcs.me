@@ -2,6 +2,7 @@
 title = "Asustor Flashtor 6 with TrueNAS Scale"
 description = "Unclouded - host your own cloud"
 date = 2024-12-17
+updated = 2025-01-03
 
 [taxonomies]
 tags = ["NAS", "TrueNAS", "Asustor"]
@@ -21,7 +22,7 @@ Or what if your (cat)photos get leaked by the cloud provider? Did I mention the 
 # Host your own "cloud"
 
 Enter: the [Asustor Flashtor 6](https://www.asustor.com/en/product?p_id=79). It's a NAS with a 6-bay NVMe SSD capacity and dual 2.5Gbps network ports. Although it comes with only 4GB of RAM, you can actually swap out the modules and upgrade to up to 32GB. So that's exactly what I did:
-```
+```bash
 admin@truenas:~$ free -m
                total        used        free      shared  buff/cache   available
 Mem:           31864        9446       22151         203         919       22418
@@ -33,7 +34,7 @@ The factory default [ADM (Asustor Disk Manager) firmware](https://www.asustor.co
 So after considering the options, I installed the latest [TrueNAS Scale](https://www.truenas.com/truenas-scale/) on it. The internal storage is too small for TrueNAS scale, and to save all the 6 NVMe bays for data storage, I've got a [480GB external USB 3.1 SSD](http://www.kingmax.com.tw/en-global/product/product/Model/Portable_SSD_KE31) that I use for the OS.
 
 For data storage, I've got [4x 2TB NVMe SSDs](https://www.westerndigital.com/en-us/products/internal-drives/wd-black-sn850x-nvme-ssd?sku=WDS200T2X0E-00BCA0):
-```
+```bash
 root@truenas[~]# nvme list
 Node                  Generic               SN                   Model                                    Namespace Usage                      Format           FW Rev  
 --------------------- --------------------- -------------------- ---------------------------------------- --------- -------------------------- ---------------- --------
