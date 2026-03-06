@@ -153,7 +153,7 @@ body {
 .content {
     word-wrap: break-word;
     margin: 0 auto;
-    margin-top: 6vmin;
+    margin-top: calc(5rem + 2vmin);
     margin-block-end: 4rem;
     width: 100%;
     max-width: var(--max-layout-width);
@@ -314,7 +314,7 @@ video {
 
 @media only screen and (max-width: 600px) {
     .content {
-        margin-top: 0rem;
+        margin-top: 5.5rem;
         max-width: var(--medium-layout-width);
     }
 
