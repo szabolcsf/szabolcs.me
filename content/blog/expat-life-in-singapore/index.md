@@ -11,7 +11,7 @@ tags = ["Singapore", "Reddit", "AMA"]
 copy_button = true
 +++
 
-# Living in Singapore as a Hungarian – My Reddit AMA Recap
+## Living in Singapore as a Hungarian – My Reddit AMA Recap
 
 I recently did an AMA (Ask Me Anything) on Reddit's r/AskHungary about what it's been like living in Singapore for the past six years. The response was awesome, and I got a whole bunch of questions about daily life, culture, work, and more. Would you guess what was the most common question? It was about bubble gum! Yeah, that's the first thing that comes to mind when Hungarians think of 
 Singapore! Below, I've put together a casual summary of the most common topics that came up, along with my personal thoughts.

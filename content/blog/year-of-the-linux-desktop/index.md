@@ -10,7 +10,7 @@ tags = ["Linux", "Desktop"]
 copy_button = true
 +++
 
-# Year of the Linux Desktop : we are there
+## Year of the Linux Desktop : we are there
 
 Memes aside, I think this is it: 2025, we are finally there. Or very close. [Debian Trixie](https://www.debian.org/News/2025/20250809) is working out-of-the-box on a [new laptop](https://www.hp.com/us-en/workstations/zbook-ultra.html) with Ryzen AI 395+ Pro / Radeon 8060s. Default kernel. Default mesa. Nothing compiled by hand or installed from 3rd party repos. It can run [Ollama](https://ollama.com/) and a bunch of different models locally at really good speeds, although for a recent RoCM, you'll need a Docker or Podman container with Ubuntu.
 
