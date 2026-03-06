@@ -8,9 +8,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.content {
-    margin-top: 2rem;
-}
+// Content margin-top is handled by the theme's main.scss
+// Do not override it here — the theme accounts for the fixed header
 
 // Smooth scrolling
 html {
