@@ -1,5 +1,5 @@
 base_url = "https://szabolcs.me"
-theme = "tabi"
+theme = "pulse"
 
 title = "$ cd ~/"
 description = "Szabolcs Fazekas is a Singapore-based Software/DevOps Engineer specializing in infrastructure, automation, and cloud technologies"
@@ -28,11 +28,13 @@ include_content = true
 index_format = "elasticlunr_json"
 
 [markdown]
-highlight_code = true
-highlight_theme = "css"
 smart_punctuation = true
 bottom_footnotes = true
 render_emoji = true
+
+[markdown.highlighting]
+style = "class"
+theme = "github-dark"
 
 [link_checker]
 skip_anchor_prefixes = [
@@ -65,18 +67,19 @@ default_theme = "dark"
 # contrast (in light theme) for readability and might not be suitable for all users.
 # Furthermore, low contrasting elements will affect your Google Lighthouse rating.
 # All other skins have optimal contrast.
-skin = "mint"
+skin = "pulse"
 
 # Set browser theme colour. Can be a single colour or [light, dark].
 # Note: Bright colors may be ignored in dark mode.
 # More details: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color
-browser_theme_color = "#087e96"
+browser_theme_color = ["#fafafa", "#0f0f14"]
 # browser_theme_color = ["#ffffff", "#000000"]  # Example of light/dark colours.
 
 # List additional stylesheets to load site-wide.
 # These stylesheets should be located in your site's `static` directory.
 # Example: stylesheets = ["extra1.css", "path/extra2.css"]
 # You can load a stylesheet for a single post by adding it to the [extra] section of the post's front matter, following this same format.
+# Note: custom.css is loaded via custom header template to ensure it loads after the skin
 stylesheets = []
 
 # Remote repository for your Zola site.
@@ -160,7 +163,7 @@ favicon_emoji = "👀"
 # Read more: https://nikitahl.com/html-meta-tags-for-social-media
 # Using an image representative of each post is recommended. You can do so by setting this variable in the [extra] section of a post's front matter.
 # If a post doesn't have a social media card, the site's default, below, will be used.
-# social_media_card = "img/social_cards/index.jpg"
+social_media_card = "img/main.webp"
 
 menu = [
     { name = "archive", url = "archive/" },

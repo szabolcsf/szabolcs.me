@@ -1,0 +1,111 @@
+footer {
+    margin-top: auto;
+    margin-block-end: 1.4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--divider-color);
+    color: var(--meta-color);
+    font-size: 0.85rem;
+    font-family: var(--post-font-family);
+    text-align: center;
+
+    .nav-links {
+        color: var(--primary-color);
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+footer section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+footer nav {
+    display: flex;
+    margin: 0 0rem;
+}
+
+.socials {
+    display: flex;
+    flex-grow: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+
+    svg {
+        max-height: 15px;
+    }
+
+    ul {
+        gap: 8px;
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: unset;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+        background-color: var(--bg-0);
+        transform: translateY(-1px);
+    }
+}
+
+.social > img {
+    aspect-ratio: 1/1;
+    width: 1.35rem;
+    height: auto;
+    color: #000000;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.social:hover > img {
+    opacity: 1;
+}
+
+.social {
+    &:hover {
+        & > img {
+            filter: invert(1);
+        }
+    }
+}
+
+@mixin dark-theme-social {
+    .social {
+        &:hover {
+            & > img {
+                filter: invert(0);
+            }
+        }
+
+        & > img {
+            filter: invert(1);
+        }
+    }
+}
+
+[data-theme="dark"] {
+    @include dark-theme-social;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        @include dark-theme-social;
+    }
+}
+
+.credits {
+    margin-top: 0.5rem;
+    opacity: 0.8;
+}

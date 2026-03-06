@@ -1,0 +1,27 @@
+// Site-specific customizations for szabolcs.me
+// Most styling is handled by the pulse theme - only site-specific overrides here
+
+// Content offset for fixed header
+body {
+    padding-top: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.content {
+    margin-top: 2rem;
+}
+
+// Smooth scrolling
+html {
+    scroll-behavior: smooth;
+}
+
+// Gradient text for the hero name
+.gradient-text {
+    background: linear-gradient(135deg, var(--primary-color), #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}

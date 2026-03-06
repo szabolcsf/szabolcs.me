@@ -1,0 +1,194 @@
+.bloglist-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+.bloglist-meta {
+    display: block;
+    background: var(--bg-2);
+    border: 1px solid var(--divider-color);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.25s ease;
+    text-decoration: none;
+    color: var(--text-color);
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.12);
+        border-color: var(--primary-color);
+    }
+
+    &::after,
+    &:hover::after {
+        display: none !important;
+        content: none !important;
+    }
+
+    &:hover {
+        background-color: var(--bg-2);
+        color: var(--text-color);
+    }
+
+    .thumbnail-image {
+        margin: 0;
+        margin-inline: auto;
+        max-width: 70%;
+    }
+
+    li.date + li.post-thumbnail .thumbnail-image {
+        margin-inline: 0;
+        margin-block-start: 0.7rem;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 0;
+        margin-inline-end: 0;
+        padding: 0;
+        color: var(--meta-color);
+        font-weight: 400;
+        font-size: 0.8rem;
+
+        li {
+            list-style-type: none;
+            white-space: nowrap;
+        }
+
+        li.draft-label {
+            width: fit-content;
+            line-height: 1.2rem;
+        }
+    }
+}
+
+.bloglist-content {
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    padding: 0;
+    margin-top: 0.75rem;
+
+    .pinned-label {
+        display: flex;
+        position: absolute;
+        top: -0.5rem;
+        align-items: center;
+        gap: 0.3rem;
+        color: var(--meta-color);
+        font-weight: 300;
+        font-size: 0.8rem;
+    }
+
+    .pinned-label svg {
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+
+    div {
+        flex: 1;
+
+        .bloglist-title {
+            margin: 0;
+            font-weight: 600;
+            font-size: 1.15em;
+            letter-spacing: -0.01em;
+
+            a {
+                color: var(--text-color-high-contrast);
+                font-weight: 600;
+                text-decoration: none;
+
+                &:hover {
+                    color: var(--primary-color);
+                    background-color: transparent;
+                }
+
+                &:hover::after {
+                    display: none;
+                }
+            }
+        }
+
+        .bloglist-tags {
+            margin-top: 0.5rem;
+
+            .tag {
+                display: inline-block;
+                margin-inline-end: 0.5rem;
+                font-weight: 500;
+                font-size: 0.7rem;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                color: var(--meta-color);
+            }
+        }
+
+        .description p {
+            margin: 0.5rem 0 0;
+            color: var(--meta-color);
+            font-weight: 350;
+            font-size: 0.88rem;
+            line-height: 1.5rem;
+        }
+    }
+}
+
+.all-posts {
+    font-weight: 450;
+    font-size: 1.2rem;
+}
+
+#all-projects {
+    margin-top: 2rem;
+}
+
+.posts-first #featured-projects {
+    margin-top: 4rem;
+}
+
+.projects-first #posts-list {
+    margin-top: 4rem;
+}
+
+@media only screen and (max-width: 1100px) {
+    .bloglist-meta {
+        border-bottom: 0;
+        padding: 1.25rem;
+
+        ul {
+            margin-block-end: 0;
+            width: 100%;
+
+            li {
+                display: inline;
+                margin-inline-end: 0.3rem;
+            }
+        }
+
+        .post-thumbnail {
+            display: none;
+        }
+    }
+
+    .bloglist-content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+
+        .pinned-label {
+            position: static;
+            margin: 0;
+            margin-top: -0.5rem;
+        }
+
+        div {
+            width: 100%;
+        }
+    }
+}
