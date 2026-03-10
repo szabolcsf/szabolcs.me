@@ -2,11 +2,13 @@
 <?xml-stylesheet href="{{ get_url(path='/sitemap_style.xsl', trailing_slash=false) | safe }}" type="text/xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {%- for sitemap_entry in entries %}
+    {%- if not sitemap_entry.permalink is containing("/page/") %}
     <url>
         <loc>{{ sitemap_entry.permalink | escape_xml | safe }}</loc>
         {%- if sitemap_entry.updated %}
         <lastmod>{{ sitemap_entry.updated }}</lastmod>
         {%- endif %}
     </url>
+    {%- endif %}
     {%- endfor %}
 </urlset>
