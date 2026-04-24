@@ -1,0 +1,23 @@
+{% set feed_url = "/strava.xml" %}
+<div id="strava-feed">
+    <h2>My Strava Activities</h2>
+    <ul id="activities-list"></ul>
+</div>
+
+<script>
+    fetch("{{ feed_url }}")
+        .then(response => response.text())
+        .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+        .then(data => {
+            const entries = data.querySelectorAll("entry");
+            const list = document.getElementById("activities-list");
+            entries.forEach(entry => {
+                const title = entry.querySelector("title").textContent;
+                const link = entry.querySelector("link").getAttribute("href");
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `<a href="${link}" target="_blank">${title}</a>`;
+                list.appendChild(listItem);
+            });
+        })
+        .catch(error => console.error("Error fetching Strava feed:", error));
+</script>
